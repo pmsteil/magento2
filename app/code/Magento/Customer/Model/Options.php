@@ -94,8 +94,7 @@ class Options
         $options = explode(';', $options);
         foreach ($options as $value) {
             $value = $this->escaper->escapeHtml(trim($value));
-            if($value != '')
-                $result[$value] = $value;
+            $result[$value] = $value;
         }
         if ($isOptional && trim(current($options))) {
             $result = array_merge([' ' => ' '], $result);
