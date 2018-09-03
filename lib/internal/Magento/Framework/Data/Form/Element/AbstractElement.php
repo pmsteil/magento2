@@ -54,7 +54,8 @@ abstract class AbstractElement extends AbstractForm
     /**
      * @var Escaper
      */
-    protected $_escaper;
+    protected $
+        r;
 
     /**
      * Lock html attribute
@@ -284,7 +285,12 @@ abstract class AbstractElement extends AbstractForm
      */
     protected function _escape($string)
     {
-        return htmlspecialchars($string, ENT_COMPAT);
+        if( is_array( $string ) ){
+           return htmlspecialchars( implode(" ",$string), ENT_COMPAT );	
+        }
+        else{
+           return htmlspecialchars($string, ENT_COMPAT);
+        }
     }
 
     /**
