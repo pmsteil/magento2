@@ -54,8 +54,7 @@ abstract class AbstractElement extends AbstractForm
     /**
      * @var Escaper
      */
-    protected $
-        r;
+    protected $;
 
     /**
      * Lock html attribute
